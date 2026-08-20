@@ -12,7 +12,8 @@ public class DependencyInjectionApplication {
 		// Engine engine = context.getBean(Engine.class);
 		// engine.startEngine();
 
-		Car car = context.getBean(Car.class);
+		Car car = context.getBean(Car.class);	//(Main Class): Annotated with @SpringBootApplication. It bootstraps the Spring IoC container,
+												//  retrieves the managed Car bean, and calls car.startCar() and car.stopCar().
 		car.startCar();
 		car.stopCar();
 	}
