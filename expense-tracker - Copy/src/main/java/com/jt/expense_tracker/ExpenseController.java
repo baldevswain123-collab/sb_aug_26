@@ -20,8 +20,9 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequiredArgsConstructor
 public class ExpenseController {
-  private final JdbcTemplate jdbcTemplate;
-  private final ExpenseRepository expenseRepository;
+  // private final JdbcTemplate jdbcTemplate;
+  // private final ExpenseRepository expenseRepository;
+  private final ExpenseService expenseService;
   private static final String EXPENSES_TABLE = "expenses";
 
 
@@ -109,6 +110,6 @@ public class ExpenseController {
     // getExpenseById(expense.getId());
     // return expenseRepository.save(expense);
 
-    return  expenseService.updateExpense(expense);
+    return  expenseService.updaExpense(expense);
   }
 }

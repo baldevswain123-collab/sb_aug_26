@@ -1,6 +1,8 @@
 package com.jt.expense_tracker;
 
-import org.hibernate.mapping.List;
+
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -9,8 +11,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor 
 public class ExpenseService {
     private final ExpenseRepository expenseRepository;
+    
 
-    public List<Expense>getExpenses(){
+    public List<Expense> getExpenses(){
         return expenseRepository.findAll();
     }
 
