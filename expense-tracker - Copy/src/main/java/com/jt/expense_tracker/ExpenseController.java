@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -18,7 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequiredArgsConstructor
+@RequiredArgsConstructor 
+@CrossOrigin("http://localhost:5173")
 public class ExpenseController {
   // private final JdbcTemplate jdbcTemplate;
   // private final ExpenseRepository expenseRepository;
@@ -27,7 +29,7 @@ public class ExpenseController {
 
 
 
-  @GetMapping("/expenses")
+  @GetMapping("/expenses") 
   public List<Expense> getExpenses() {
     //String sql = "SELECT * FROM %s".formatted(EXPENSES_TABLE);
     //return jdbcTemplate.query(sql, new BeanPropertyRowMapper<Expense>(Expense.class));
