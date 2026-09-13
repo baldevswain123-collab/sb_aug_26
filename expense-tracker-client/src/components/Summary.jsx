@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({expenses}) => {
+const Summary = ({ expenses }) => {
   const totalExpense = expenses.reduce((accum, exp) => exp.price + accum, 0)
 
   return (
